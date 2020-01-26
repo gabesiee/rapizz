@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="64.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../pictures/logo.png" />
+            <Image url="@../../pictures/logo.png" />
          </image>
       </ImageView>
       <Label layoutX="267.0" layoutY="58.0" text="LE SERVICE PLUS RAPIZZ QUE L'ECLAIR !" textFill="#bc0606">
@@ -20,20 +20,34 @@
             <Font size="42.0" />
          </font>
       </Label>
-      <Button layoutX="104.0" layoutY="472.0" mnemonicParsing="false" prefWidth="350.0" text="CLIENT">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Button>
-      <Button layoutX="827.0" layoutY="472.0" mnemonicParsing="false" onAction="#handleGestButton" prefWidth="350.0" text="GESTIONNAIRE">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="201.0" fitWidth="240.0" layoutX="526.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../pictures/logo2.png" />
-         </image>
-      </ImageView>
+      <VBox layoutX="34.0" layoutY="235.0" prefHeight="251.0" prefWidth="211.0">
+         <children>
+            <Button fx:id="menuButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="Menu">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="clientsButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="Clients">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="ordersButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="Commandes">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="delivMenButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="Livreurs">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="vehicButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" text="Véhicules">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
