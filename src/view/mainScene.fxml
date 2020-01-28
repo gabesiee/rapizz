@@ -17,22 +17,22 @@
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="clientsButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="250.0" text="Clients">
+            <Button fx:id="clientsButton" mnemonicParsing="false" onAction="#clientsScene" prefHeight="60.0" prefWidth="250.0" text="Clients">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="ordersButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="250.0" text="Commandes">
+            <Button fx:id="ordersButton" mnemonicParsing="false" onAction="#ordersScene" prefHeight="60.0" prefWidth="250.0" text="Commandes">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="delivMenButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="250.0" text="Livreurs">
+            <Button fx:id="delivMenButton" mnemonicParsing="false" onAction="#delivMenScene" prefHeight="60.0" prefWidth="250.0" text="Livreurs">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="vehicButton" mnemonicParsing="false" prefHeight="60.0" prefWidth="250.0" text="Véhicules">
+            <Button fx:id="vehicButton" mnemonicParsing="false" onAction="#vehicScene" prefHeight="60.0" prefWidth="250.0" text="Véhicules">
                <font>
                   <Font size="25.0" />
                </font>

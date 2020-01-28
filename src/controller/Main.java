@@ -36,11 +36,53 @@ public class Main extends Application {
     public void menuScene() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/menuScene.fxml"));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+            Main.stg.setScene(new Scene(root));
+            Main.stg.show();
 
-            Main.stg.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void clientsScene() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/clientsScene.fxml"));
+            Main.stg.setScene(new Scene(root));
+            Main.stg.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void ordersScene() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/menuScene.fxml"));
+            Main.stg.setScene(new Scene(root));
+            Main.stg.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void delivMenScene() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/menuScene.fxml"));
+            Main.stg.setScene(new Scene(root));
+            Main.stg.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void vehicScene() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/view/menuScene.fxml"));
+            Main.stg.setScene(new Scene(root));
+            Main.stg.show();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
