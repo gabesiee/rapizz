@@ -1,59 +1,81 @@
 package model;
 
 public class Client {
-	private int clientID;
-	private String clientLastName;
-	private String clientFirstName;
-	private String clientAdrs;
-	private float accountBalance;
-	private int pizzaCounter;
+    private int clientID;
+    private String clientLastName;
+    private String clientFirstName;
+    private String clientAdrs;
+    private float accountBalance;
+    private int pizzaCounter;
 
-	public int getClientID() {
-		return clientID;
-	}
+    public Client() {
 
-	public void setClientID(int clientID) {
-		this.clientID = clientID;
-	}
+    }
 
-	public String getClientLastName() {
-		return clientLastName;
-	}
+    public Client(Client client) {
+        this.clientID = client.getClientID();
+        this.clientLastName = client.getClientLastName();
+        this.clientFirstName = client.getClientFirstName();
+        this.clientAdrs = client.getClientAdrs();
+        this.accountBalance = client.getAccountBalance();
+        this.pizzaCounter = client.getPizzaCounter();
+    }
 
-	public void setClientLastName(String clientLastName) {
-		this.clientLastName = clientLastName;
-	}
+    public Client(int clientID, String clientLastName, String clientFirstName, String clientAdrs, float accountBalance, int pizzaCounter) {
+        this.clientID = clientID;
+        this.clientLastName = clientLastName;
+        this.clientFirstName = clientFirstName;
+        this.clientAdrs = clientAdrs;
+        this.accountBalance = accountBalance;
+        this.pizzaCounter = pizzaCounter;
+    }
 
-	public String getClientFirstName() {
-		return clientFirstName;
-	}
+    public int getClientID() {
+        return clientID;
+    }
 
-	public void setClientFirstName(String clientFirstName) {
-		this.clientFirstName = clientFirstName;
-	}
+    public void setClientID(int clientID) {
+        this.clientID = clientID;
+    }
 
-	public String getClientAdrs() {
-		return clientAdrs;
-	}
+    public String getClientLastName() {
+        return clientLastName;
+    }
 
-	public void setClientAdrs(String clientAdrs) {
-		this.clientAdrs = clientAdrs;
-	}
+    public void setClientLastName(String clientLastName) {
+        this.clientLastName = clientLastName;
+    }
 
-	public float getAccountBalance() {
-		return accountBalance;
-	}
+    public String getClientFirstName() {
+        return clientFirstName;
+    }
 
-	public void setAccountBalance(float accountBalance) {
-		this.accountBalance = accountBalance;
-	}
+    public void setClientFirstName(String clientFirstName) {
+        this.clientFirstName = clientFirstName;
+    }
 
-	public int getPizzaCounter() {
-		return pizzaCounter;
-	}
+    public String getClientAdrs() {
+        return clientAdrs;
+    }
 
-	public void setPizzaCounter(int pizzaCounter) {
-		this.pizzaCounter = pizzaCounter;
-	}
+    public void setClientAdrs(String clientAdrs) {
+        this.clientAdrs = clientAdrs;
+    }
+
+    public float getAccountBalance() {
+        return accountBalance;
+    }
+
+    public void setAccountBalance(float accountBalance) {
+        this.accountBalance = accountBalance;
+    }
+
+    public int getPizzaCounter() {
+        return pizzaCounter;
+    }
+
+    public void setPizzaCounter(int pizzaCounter) {
+        this.pizzaCounter = pizzaCounter;
+    }
 
 }

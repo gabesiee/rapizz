@@ -9,22 +9,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Menu">
-   <children>
-      <Label layoutX="322.0" layoutY="32.0" text="RAPIZZ" textFill="#bf0101">
-         <font>
-            <Font size="45.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="110.0" fitWidth="120.0" layoutX="212.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../logo.png" />
-         </image>
-      </ImageView>
-      <ListView layoutX="110.0" layoutY="152.0" prefHeight="300.0" prefWidth="500.0" />
-      <ImageView fx:id="returnButton" fitHeight="50.0" fitWidth="50.0" layoutX="36.0" layoutY="380.0" onMouseClicked="#returnMainScene" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../return.png" />
-         </image>
-      </ImageView>
-   </children>
+    <children>
+        <Label layoutX="322.0" layoutY="32.0" text="RAPIZZ" textFill="#bf0101">
+            <font>
+                <Font size="45.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="110.0" fitWidth="120.0" layoutX="212.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="returnButton" fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="400.0" onMouseClicked="#returnMainScene" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../return.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="tableView" layoutX="85.0" layoutY="152.0" prefHeight="300.0" prefWidth="550.0">
+            <columns>
+                <TableColumn fx:id="numberColumn" prefWidth="75.0" text="Pizza" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="359.0" text="Ingrédients" />
+            <TableColumn minWidth="0.0" prefWidth="114.0" text="Tarif de base" />
+            </columns>
+        </TableView>
+    </children>
 </AnchorPane>

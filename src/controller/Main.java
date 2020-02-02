@@ -1,14 +1,23 @@
 package controller;
 
 
+import dao.ClientDAO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import model.Client;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Properties;
 
 public class Main extends Application {
     static Stage stg;
@@ -29,8 +38,9 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, SQLException {
         Application.launch(args);
+
     }
 
     public void menuScene() {
@@ -57,7 +67,7 @@ public class Main extends Application {
 
     public void ordersScene() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/menuScene.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/ordersScene.fxml"));
             Main.stg.setScene(new Scene(root));
             Main.stg.show();
 
@@ -68,7 +78,7 @@ public class Main extends Application {
 
     public void delivMenScene() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/menuScene.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/delivMenScene.fxml"));
             Main.stg.setScene(new Scene(root));
             Main.stg.show();
 
@@ -79,7 +89,7 @@ public class Main extends Application {
 
     public void vehicScene() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/menuScene.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/vehicScene.fxml"));
             Main.stg.setScene(new Scene(root));
             Main.stg.show();
 

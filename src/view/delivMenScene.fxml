@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Clients">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Menu">
     <children>
         <Label layoutX="322.0" layoutY="32.0" text="RAPIZZ" textFill="#bf0101">
             <font>
@@ -25,15 +25,11 @@
                 <Image url="@../return.png" />
             </image>
         </ImageView>
-        <TableView fx:id="tableView" layoutX="85.0" layoutY="152.0" prefHeight="300.0" prefWidth="550.0">
-            <columns>
-                <TableColumn fx:id="numberColumn" prefWidth="75.0" text="Numéro" />
-                <TableColumn fx:id="lastNameColumn" prefWidth="96.0" text="Nom" />
-                <TableColumn fx:id="firstNameColumn" prefWidth="85.0" text="Prénom" />
-                <TableColumn fx:id="addressColumn" prefWidth="108.0" text="Adresse" />
-                <TableColumn fx:id="accountBalanceColumn" prefWidth="88.0" text="Solde compte" />
-                <TableColumn fx:id="pizzaCounterColumn" prefWidth="97.0" text="Compteur pizza" />
-            </columns>
-        </TableView>
+      <TableView fx:id="tableView1" layoutX="203.0" layoutY="152.0" prefHeight="300.0" prefWidth="315.0">
+         <columns>
+            <TableColumn fx:id="numberColumn1" prefWidth="151.0" text="Nom" />
+            <TableColumn fx:id="lastNameColumn1" prefWidth="165.0" text="Nombre de retard" />
+         </columns>
+      </TableView>
     </children>
 </AnchorPane>
