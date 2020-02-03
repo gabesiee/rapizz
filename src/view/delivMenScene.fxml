@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeliveryMen">
+    <children>
+        <Label layoutX="322.0" layoutY="32.0" text="RAPIZZ" textFill="#bf0101">
+            <font>
+                <Font size="45.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="110.0" fitWidth="120.0" layoutX="212.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="returnButton" fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="400.0" onMouseClicked="#returnMainScene" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../return.png" />
+            </image>
+        </ImageView>
+      <TableView fx:id="tableView" layoutX="147.0" layoutY="152.0" prefHeight="300.0" prefWidth="427.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="192.0" text="Nom" />
+            <TableColumn fx:id="delivColumn" prefWidth="122.0" text="Nombre de livraison" />
+            <TableColumn fx:id="lateColumn" prefWidth="111.0" text="Nombre de retard" />
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>
