@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Menu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Vehicules">
     <children>
         <Label layoutX="322.0" layoutY="32.0" text="RAPIZZ" textFill="#bf0101">
             <font>
@@ -25,10 +25,12 @@
                 <Image url="@../return.png" />
             </image>
         </ImageView>
-      <TableView fx:id="tableView1" layoutX="203.0" layoutY="152.0" prefHeight="300.0" prefWidth="315.0">
+      <TableView fx:id="tableView" layoutX="112.0" layoutY="153.0" prefHeight="300.0" prefWidth="497.0">
          <columns>
-            <TableColumn fx:id="numberColumn1" prefWidth="151.0" text="Type" />
-            <TableColumn fx:id="lastNameColumn1" prefWidth="165.0" text="Modèle" />
+            <TableColumn fx:id="typeColumn" prefWidth="77.0" text="Type" />
+            <TableColumn fx:id="modelColumn" prefWidth="211.0" text="Modèle" />
+            <TableColumn fx:id="registrationColumn" prefWidth="99.0" text="Immatriculation" />
+            <TableColumn fx:id="delivColumn" prefWidth="109.0" text="Nombre livraison" />
          </columns>
       </TableView>
     </children>

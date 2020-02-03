@@ -10,8 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import model.Client;
-import model.Pizza;
+import model.DeliveryMan;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,15 +18,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class Menu implements Initializable {
+public class DeliveryMen implements Initializable {
     @FXML
-    private TableView<Pizza> tableView;
+    private TableView<DeliveryMan> tableView;
     @FXML
-    private TableColumn<Pizza, String> pizzaColumn;
+    private TableColumn<DeliveryMan, String> nameColumn;
     @FXML
-    private TableColumn<Pizza, String> ingreColumn;
+    private TableColumn<DeliveryMan, Integer> delivColumn;
     @FXML
-    private TableColumn<Pizza, Integer> priceColumn;
+    private TableColumn<DeliveryMan, Integer> lateColumn;
+
 
     public void returnMainScene() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/mainScene.fxml"));
@@ -38,19 +38,19 @@ public class Menu implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        pizzaColumn.setCellValueFactory(new PropertyValueFactory<>("pizzaName"));
-        ingreColumn.setCellValueFactory(new PropertyValueFactory<>("ingreName"));
-        priceColumn.setCellValueFactory(new PropertyValueFactory<>("basePrice"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("delivManName"));
+        delivColumn.setCellValueFactory(new PropertyValueFactory<>("delivDone"));
+        lateColumn.setCellValueFactory(new PropertyValueFactory<>("late"));
 
-        Pizza pizza = new Pizza();
-        ArrayList<Pizza> pizzas = null;
+        DeliveryMan delivMan = new DeliveryMan();
+        ArrayList<DeliveryMan> deliveryMen = null;
         try {
-            pizzas = pizza.getAll();
+            deliveryMen = delivMan.getAll();
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
-        ObservableList<Pizza> piz = FXCollections.observableArrayList(pizzas);
+        ObservableList<DeliveryMan> deliv = FXCollections.observableArrayList(deliveryMen);
 
-        tableView.setItems(piz);
+        tableView.setItems(deliv);
     }
 }

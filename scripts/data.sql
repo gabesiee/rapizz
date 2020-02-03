@@ -67,7 +67,8 @@ VALUES ('JH-257-YT', 'Piaggio Liberty 50', 2),
        ('PM-967-PO', 'Peugeot 208', 1),
        ('BA-874-RN', 'Citroen Berlingo', 1),
        ('QQ-337-ZC', 'Piaggio Liberty 50', 2),
-       ('FV-148-RA', 'Kymco Agility Delivry 50', 2);
+       ('FV-148-RA', 'Kymco Agility Delivry 50', 2),
+       ('JZ-272-KE', 'Mercedes classe C', 1);
 
 INSERT INTO COMMANDE (COM_DATE, FIDELITE, RETARD, TAILLE_ID, PIZZA_ID, CLIENT_ID, VEHIC_ID, LIVREUR_ID)
 VALUES ('2019-08-14', 0, 0, 2, 3, 4, 2, 1),

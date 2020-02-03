@@ -1,6 +1,5 @@
 package controller;
 
-import dao.ClientDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -36,10 +35,6 @@ public class Clients implements Initializable {
     @FXML
     private TableColumn<Client, Integer> pizzaCounterColumn;
 
-    public Clients() {
-    }
-
-
     public void returnMainScene() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/mainScene.fxml"));
         Main.stg.setScene(new Scene(root));
@@ -57,10 +52,10 @@ public class Clients implements Initializable {
         accountBalanceColumn.setCellValueFactory(new PropertyValueFactory<>("accountBalance"));
         pizzaCounterColumn.setCellValueFactory(new PropertyValueFactory<>("pizzaCounter"));
 
-        ClientDAO cDAO = new ClientDAO();
+        Client client = new Client();
         ArrayList<Client> clients = null;
         try {
-            clients = cDAO.getAll();
+            clients = client.getAll();
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }

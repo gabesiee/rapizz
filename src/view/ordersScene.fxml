@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Clients">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Orders">
     <children>
         <Label layoutX="322.0" layoutY="32.0" text="RAPIZZ" textFill="#bf0101">
             <font>
@@ -20,21 +20,22 @@
                 <Image url="@../logo.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="returnButton" fitHeight="40.0" fitWidth="40.0" layoutX="5.0" layoutY="400.0" onMouseClicked="#returnMainScene" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="returnButton" fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="100.0" onMouseClicked="#returnMainScene" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../return.png" />
             </image>
         </ImageView>
-        <TableView fx:id="tableView" layoutX="50.0" layoutY="140.0" prefHeight="300.0" prefWidth="621.0">
+        <TableView fx:id="tableView" layoutX="16.0" layoutY="157.0" prefHeight="300.0" prefWidth="689.0">
             <columns>
-                <TableColumn fx:id="numberColumn" prefWidth="59.0" text="Numéro" />
-                <TableColumn fx:id="lastNameColumn" prefWidth="89.0" text="Date" />
-                <TableColumn fx:id="firstNameColumn" prefWidth="127.0" text="Client" />
-                <TableColumn fx:id="accountBalanceColumn" prefWidth="110.0" text="Pizza" />
-                <TableColumn fx:id="pizzaCounterColumn" prefWidth="65.0" text="Taille" />
-            <TableColumn prefWidth="75.0" text="Véhicule" />
-                <TableColumn fx:id="addressColumn" prefWidth="48.0" text="Fidélité" />
-            <TableColumn prefWidth="47.0" text="Retard" />
+                <TableColumn fx:id="dateColumn" prefWidth="74.0" text="Date" />
+                <TableColumn fx:id="clientColumn" prefWidth="132.0" text="Client" />
+                <TableColumn fx:id="pizzaColumn" prefWidth="106.0" text="Pizza" />
+                <TableColumn fx:id="sizeColumn" prefWidth="73.0" text="Taille" />
+                <TableColumn fx:id="delivColumn" prefWidth="72.0" text="Livreur" />
+                <TableColumn fx:id="vehicColumn" prefWidth="72.0" text="Véhicule" />
+                <TableColumn fx:id="fidelityColumn" prefWidth="49.0" text="Fidélité" />
+                <TableColumn fx:id="lateColumn" prefWidth="56.0" text="Retard" />
+            <TableColumn fx:id="priceColumn" prefWidth="61.0" text="Prix" />
             </columns>
         </TableView>
     </children>
